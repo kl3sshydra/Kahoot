@@ -1,6 +1,7 @@
 # Kahoot
 
 A simple Botter made in Python 3 for Kahoot.com.
+Also sorry for the shitty code lol.
 
 # How to Run 
 
@@ -16,4 +17,5 @@ python3 main.py
 # Developer Contact
 
 Telegram: https://t.me/xssinjection || 1713081092
+
 Discord: AsyncCode#4450 || 843362798486159371
