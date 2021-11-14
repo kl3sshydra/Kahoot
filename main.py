@@ -1,6 +1,7 @@
 # Importing Libraries
 
 from kahoot import client
+from threading import Thread
 from colorama import Fore, Style
 import random
 
@@ -18,14 +19,21 @@ def joinHandle():
 int(code)
 
 # Bot Attack
-
 bot = client()
 this_variable_should_go_up_lol = 0
-while this_variable_should_go_up_lol < 1000000:
-    this_variable_should_go_up_lol += 1
-    random_int = random.randint(10000, 1010000)
-    random_int = str(random_int)
-    botname = username + " - " + random_int
-    bot.join(code, botname)
-    bot.on("joined",joinHandle)
-    random_int = int(random_int)
+
+# thread that will be fucking spammed thousands of times
+def attack_Thread():
+    while this_variable_should_go_up_lol < 1000000:
+        this_variable_should_go_up_lol += 1
+        random_int = random.randint(10000, 1010000)
+        random_int = str(random_int)
+        botname = username + " - " + random_int
+        bot.join(code, botname)
+        bot.on("joined",joinHandle)
+        random_int = int(random_int)
+
+
+for x in range(int(input(Fore.RED+" Tell me the numbers of threads, please. > "))):
+    exec(f"t{f} = Thread(target=attack_Thread)")
+    exec(f"t{f}.start()")
